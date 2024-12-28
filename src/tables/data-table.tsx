@@ -1,9 +1,7 @@
-import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
   TableCell,
-  TableFooter,
   TableHead,
   TableHeader,
   TableRow,
@@ -74,11 +72,6 @@ export function DataTable<TData, TValue>({
             </TableRow>
           )}
         </TableBody>
-        <TableFooter>
-          <TableCell colSpan={columns.length} className="text-end p-0">
-            <Button>Add new color</Button>
-          </TableCell>
-        </TableFooter>
       </Table>
     </div>
   );

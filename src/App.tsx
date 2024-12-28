@@ -1,23 +1,23 @@
 import "./App.css";
 
 import { useEffect, useState } from "react";
-import DemoPage from "./payments/page";
+import { ColorTable } from "./tables/ColorTable";
+import { FontTable } from "./tables/FontTable";
 
 function App() {
-  const [demoPageComponent, setDemoPageComponent] =
-    useState<JSX.Element | null>(null);
+  const [components, setComponents] = useState<JSX.Element[] | null>(null);
 
   useEffect(() => {
     const loadDemoPage = async () => {
-      const component = await DemoPage();
-      setDemoPageComponent(component);
+      const components = [await ColorTable(), await FontTable()];
+      setComponents(components);
     };
     loadDemoPage();
   }, []);
 
   return (
     <>
-      <div className="container mx-auto py-10 w-1/4">{demoPageComponent}</div>
+      <div className="container mx-auto py-10 w-1/4">{components}</div>
     </>
   );
 }
