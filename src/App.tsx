@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-      <div className="container mx-auto py-10">{demoPageComponent}</div>
+      <div className="container mx-auto py-10 w-1/4">{demoPageComponent}</div>
     </>
   );
 }

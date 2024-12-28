@@ -14,6 +14,10 @@ body {
   justify-content: center;
 }
 
+#root {
+  width: 100%;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
